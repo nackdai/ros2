@@ -72,7 +72,16 @@ RUN cd ros2_ws && \
     colcon build --symlink-install
 
 RUN . /ros2_ws/install/setup.sh \
-  && echo ". /ros2_ws/install/local_setup.bash" >> ~/.bashrc
+  && echo ". /ros2_ws/install/setup.bash" >> ~/.bashrc
+
+RUN apt-get update && apt-get install -y \
+  clang-9 \
+  clang-format-9\
+  clang-tidy-9 \
+  gdb \
+  lld-9 \
+  lldb-9 \
+  ninja-build
 
 # Clean up
 RUN apt-get autoremove -y \
