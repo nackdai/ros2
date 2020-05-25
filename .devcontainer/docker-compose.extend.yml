@@ -1,0 +1,10 @@
+version: "2.4"
+services:
+  ros2:
+    tty: true
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"

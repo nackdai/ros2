@@ -1,0 +1,21 @@
+{
+    "name": "ros2 dev container",
+    "dockerComposeFile": [
+        "docker-compose.yml",
+        "docker-compose.extend.yml"
+    ],
+    "service": "ros2",
+    "workspaceFolder": "/ros2",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake",
+        "xaver.clang-format",
+        "ms-iot.vscode-ros"
+    ],
+    "initializeCommand": [
+        "xhost",
+        "+local:aten_devcontainer_aten"
+    ]
+}
