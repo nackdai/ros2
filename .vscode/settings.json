@@ -1,0 +1,5 @@
+{
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format-9",
+    "clang-format.executable": "/usr/bin/clang-format-9",
+    "editor.formatOnSave": true
+}
