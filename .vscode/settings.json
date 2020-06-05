@@ -1,5 +1,7 @@
 {
     "C_Cpp.clang_format_path": "/usr/bin/clang-format-9",
     "clang-format.executable": "/usr/bin/clang-format-9",
-    "editor.formatOnSave": true
+    "cmakeFormat.exePath": "/root/.pyenv/shims/cmake-format",
+    "editor.formatOnSave": true,
+    "python.pythonPath": "/root/.pyenv/versions/3.8.2/bin/python"
 }
