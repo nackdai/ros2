@@ -1,0 +1,11 @@
+test_node:  # Need to specify this to node
+  ros__parameters:
+    param1: 10    # int
+    param2: 10.0  # double
+    param3: "ok"  # string
+    param4: true  # bool
+    param5: [10, 20]  # interger array
+    param6: [true, false, false]  # bool array
+    param7: [30]  # interger array
+    param8: [20.0, 30.0, 40.0, 50.0]  # double array
+    param9: ["ok", "ng", "hoge", "really?"] # string array
