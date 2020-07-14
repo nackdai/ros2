@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 
+option(BUILD_MSG "" OFF)
+
 project(ros2)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -15,15 +17,10 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
-execute_process(
-  COMMAND bash -c "cd ${CMAKE_CURRENT_SOURCE_DIR}/messages && colcon build")
-
-function(include_package package)
-  set(CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/messages/install/${package})
-  find_package(${package} REQUIRED)
-endfunction()
-
-include_package(greeting_msg)
-
-add_subdirectory(pubsub)
-add_subdirectory(tf)
+if (BUILD_MSG)
+    add_subdirectory(messages)
+else()
+    add_subdirectory(use_msg)
+    add_subdirectory(pubsub)
+    add_subdirectory(tf)
+endif()
